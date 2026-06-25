@@ -1,0 +1,14 @@
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# Runtime/local-only
+.env
+*.log
+node_modules/
+__pycache__/
+.pytest_cache/
+
+# External reference clones stay local, not vendored
+reference-clones/
