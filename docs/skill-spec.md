@@ -6,6 +6,8 @@
 - Category: `productivity`
 - Trigger: reviewing AI-generated prose, code, automation specs, or agent outputs for polished but weak work.
 - Related skills: `brightblitz-agent-output-qa`, `requesting-code-review`, `brightblitz-client-facing-deliverable-preflight`
+- Support files: `references/review-patterns.md`, `references/maintainer-notes.md`
+- Eval fixtures: `evals/fixtures/`
 
 ## Required behavior
 
@@ -28,6 +30,7 @@ The skill must instruct the agent to:
 - Do not expose secrets.
 - Do not treat self-reported success as verified fact.
 - Do not substitute this skill for specialist or approval gates.
+- Phrase related skills as routing helpers when installed, not guaranteed dependencies in every profile.
 
 ## Output format
 
@@ -46,3 +49,15 @@ The review output must include:
 - Slop patterns found
 - Assumptions or limits
 - Recommended next action
+
+## Regression fixture minimum
+
+Before release, verify that fixtures exist for:
+
+- Prose vague claim.
+- Code swallowed error.
+- Automation missing failure mode.
+- Agent unverified self-report.
+- Clean pass case.
+
+Each fixture must state expected decision, expected confidence, and required findings.

@@ -33,11 +33,18 @@ See `docs/source-reference-review.md` for the source review summary, input-guard
 
 ```text
 skills/productivity/brightblitz-ai-slop-qa/SKILL.md
+skills/productivity/brightblitz-ai-slop-qa/references/review-patterns.md
+skills/productivity/brightblitz-ai-slop-qa/references/maintainer-notes.md
 docs/prd.md
 docs/skill-spec.md
 docs/workflow-map.md
 docs/review-gates.md
 docs/source-reference-review.md
+evals/fixtures/prose-vague-claim.md
+evals/fixtures/code-swallowed-error.md
+evals/fixtures/automation-missing-failure-mode.md
+evals/fixtures/agent-unverified-self-report.md
+evals/fixtures/clean-pass-case.md
 examples/ai-slop-qa-report-example.md
 ```
 
@@ -55,14 +62,15 @@ Then restart or reload the target Hermes session so the skill loader sees the ne
 
 ## Validation
 
-Validated locally before first upload:
+Validated locally before first upload and after the review patch:
 
 - YAML frontmatter starts at byte 0 and parses.
 - Required `name` and `description` fields are present.
 - Description is below the Hermes limit.
 - Body is non-empty.
-- No em dashes or en dashes are present in the skill.
-- The skill loads in Carmen's active Hermes profile.
+- No em dashes or en dashes are present in skill, docs, examples, or eval fixtures.
+- Eval fixtures exist for prose, code, automation, agent-output, and clean/pass cases.
+- The skill loads in Carmen's active Hermes profile after local profile copy.
 
 ## Approval boundary
 

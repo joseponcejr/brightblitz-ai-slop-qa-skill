@@ -3,13 +3,13 @@
 ## Reviewed sources
 
 - `hardikpandya/stop-slop`
-  - Local path: `reference/ai-slop-skill-references/stop-slop`
   - Reviewed commit: `8da1f030185bdfe8471220585162991eaeb970e9`
   - License: MIT
 - `scanaislop/aislop`
-  - Local path: `reference/ai-slop-skill-references/aislop`
   - Reviewed commit: `5922154b18d38370974d50d79f0478ba8eeee545`
   - License: MIT
+
+Build-time local clones were used only as reference material. The external repositories are not vendored into this package. Runtime users should rely on this repo's package-local support files and docs.
 
 ## Input guard notes
 
@@ -52,7 +52,7 @@ Best adaptation: use it as the code and automation layer. The native skill shoul
 
 ## Combined BrightBlitz skill design
 
-The new skill should be a review workflow rather than a new runtime dependency:
+The new skill is a review workflow rather than a runtime dependency:
 
 1. Classify the artifact: prose, code, automation spec, agent output, or mixed.
 2. Anchor to the original request and audience.
