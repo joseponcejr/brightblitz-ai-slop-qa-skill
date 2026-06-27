@@ -14,7 +14,7 @@ fix-first
 
 ## Expected confidence
 
-medium
+low
 
 ## Required findings
 

@@ -5,6 +5,7 @@
 - Added a standard-library package validator that checks skill frontmatter, support files, public-readiness text, and all smoke fixtures.
 - Added the validation command to SKILL.md and README.md.
 - Replaced machine-local handoff wording with public-safe reviewable artifact wording.
+- Clarified repo-root maintainer assets, confidence rules for self-reported agent output, decision mapping, and validator limits after Code Owl review.
 
 ## 1.0.0-draft.2
 

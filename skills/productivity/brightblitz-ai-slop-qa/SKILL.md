@@ -18,7 +18,7 @@ Use this skill as a pre-acceptance QA gate for AI-generated work that looks poli
 
 AI slop is not only awkward writing. It also includes unsupported claims, hidden stubs, swallowed errors, hallucinated dependencies, hardcoded config, vague strategy, weak failure handling, and completion reports with no proof.
 
-This skill adapts patterns from two external reference repositories, `hardikpandya/stop-slop` and `scanaislop/aislop`, but it does not install, run, or vendor those tools. Source details and reviewed commits live in `docs/source-reference-review.md`.
+This skill adapts patterns from two external reference repositories, `hardikpandya/stop-slop` and `scanaislop/aislop`, but it does not install, run, or vendor those tools. Source details and reviewed commits live in the repository maintainer document `docs/source-reference-review.md`.
 
 ## When to Use
 
@@ -113,6 +113,12 @@ Use the detailed pattern lists in `references/review-patterns.md` when a pass ap
 - **Fix needed:** TODOs, debug leftovers, untested changed path, unnecessary wrappers, misleading comments, vague claims, unclear config, or missing failure mode.
 - **Suggestion:** style or structure improvement that does not change behavior, evidence, safety, or readiness.
 
+Decision mapping:
+
+- Any unresolved blocker means the artifact cannot pass.
+- Use **reject** when the artifact is unsafe, misleading, non-responsive, or too weak to repair without replacing the core work.
+- Use **fix-first** when the artifact is useful but needs named corrections, missing evidence, or specialist review before BrightBlitz relies on it.
+
 ### 6. Decide
 
 Return one decision:
@@ -124,8 +130,8 @@ Return one decision:
 Confidence levels:
 
 - **high:** you verified the artifact and evidence directly.
-- **medium:** you reviewed the artifact but some evidence or context is missing.
-- **low:** you only have a self-report, partial excerpt, or inaccessible handle.
+- **medium:** you reviewed an accessible artifact, but some evidence, context, or specialist review is missing.
+- **low:** you only have a self-report, partial excerpt, inaccessible handle, or machine-local reference that the requester cannot review.
 
 ## Report Format
 
@@ -169,7 +175,7 @@ If a section has no items, write `none`.
 
 ## Eval Fixtures
 
-This package includes smoke-test fixtures in `evals/fixtures/` and a deterministic validator at `scripts/validate_skill_package.py`. Run the validator before publishing or installing the skill into another profile:
+The source repository includes maintainer smoke-test fixtures in `evals/fixtures/` and a deterministic validator at `scripts/validate_skill_package.py`. These are repo-root validation tools, not runtime files that are copied into a Hermes profile with the skill directory. Run the validator from the repository root before publishing or installing the skill into another profile:
 
 ```bash
 python scripts/validate_skill_package.py

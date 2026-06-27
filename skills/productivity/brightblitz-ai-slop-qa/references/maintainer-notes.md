@@ -14,6 +14,8 @@ When a recurring slop pattern appears:
 4. Update `docs/review-gates.md` if the new pattern changes release criteria.
 5. Run the package validation script or equivalent checks before release.
 
+The validator is a deterministic smoke test for package structure, forbidden public references, and fixture drift. It is not a reasoning-quality evaluator, and a green run does not replace human or Code Owl review when the skill behavior changes.
+
 ## What not to add
 
 Do not add:

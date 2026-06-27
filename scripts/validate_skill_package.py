@@ -29,7 +29,7 @@ EXPECTED_FIXTURES = {
     "prose-vague-claim.md": ("fix-first", "high"),
     "code-swallowed-error.md": ("reject", "high"),
     "automation-missing-failure-mode.md": ("fix-first", "high"),
-    "agent-unverified-self-report.md": ("fix-first", "medium"),
+    "agent-unverified-self-report.md": ("fix-first", "low"),
     "clean-pass-case.md": ("pass", "high"),
 }
 FORBIDDEN_PUBLIC_REFS = [
@@ -101,7 +101,7 @@ def predict_fixture(input_text: str, artifact_type: str) -> tuple[str, str, list
     elif artifact_type == "agent-output":
         if "all tests pass" in lowered and ("my machine" in lowered or "local" in lowered):
             decision = "fix-first"
-            confidence = "medium"
+            confidence = "low"
             findings.extend(["self-report not verified", "missing reviewable handle"])
 
     elif artifact_type == "mixed":
@@ -150,7 +150,7 @@ def validate_public_text() -> None:
     for path in iter_public_text_files():
         text = path.read_text(encoding="utf-8")
         rel = path.relative_to(ROOT)
-        if "—" in text or "–" in text:
+        if "\u2014" in text or "\u2013" in text:
             fail(f"Non-ASCII dash found in {rel}")
         for forbidden in FORBIDDEN_PUBLIC_REFS:
             if forbidden.lower() in text.lower():

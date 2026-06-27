@@ -34,7 +34,7 @@
 ## Gate 5: Eval fixture coverage
 
 - `evals/fixtures/prose-vague-claim.md` expects a prose fix-first decision.
-- `evals/fixtures/code-swallowed-error.md` expects a code blocker for swallowed failure.
+- `evals/fixtures/code-swallowed-error.md` expects a code reject decision for swallowed failure.
 - `evals/fixtures/automation-missing-failure-mode.md` expects an automation fix-first decision.
 - `evals/fixtures/agent-unverified-self-report.md` expects an agent-output fix-first decision.
 - `evals/fixtures/clean-pass-case.md` expects a pass decision.

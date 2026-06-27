@@ -46,6 +46,7 @@ evals/fixtures/automation-missing-failure-mode.md
 evals/fixtures/agent-unverified-self-report.md
 evals/fixtures/clean-pass-case.md
 examples/ai-slop-qa-report-example.md
+scripts/validate_skill_package.py
 ```
 
 ## Install into a Hermes profile
@@ -59,6 +60,8 @@ hermes -p <profile> skills list --source local | grep brightblitz-ai-slop
 ```
 
 Then restart or reload the target Hermes session so the skill loader sees the new skill.
+
+This copies the runtime skill package only. Repository-root files such as `docs/`, `evals/`, `examples/`, and `scripts/` are maintainer and release-validation assets that remain in this source repository unless a rollout package explicitly includes them.
 
 ## Validation
 
