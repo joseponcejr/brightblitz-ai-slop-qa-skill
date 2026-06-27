@@ -1,7 +1,7 @@
 ---
 name: brightblitz-ai-slop-qa
 description: Use when reviewing AI-generated prose, code, automation specs, or agent outputs for polished but weak "AI slop" before BrightBlitz accepts, ships, publishes, or hands off the work. Combines prose-pattern cleanup with code and automation defect checks, evidence gates, and BrightBlitz communication standards.
-version: 1.0.0-draft.2
+version: 1.0.0-draft.3
 author: BrightBlitz / Carmen Vega
 license: Private BrightBlitz Internal
 metadata:
@@ -105,7 +105,7 @@ Use the detailed pattern lists in `references/review-patterns.md` when a pass ap
 - **BrightBlitz communication pass:** apply empathy before authority, client-as-hero framing, external and internal problem awareness, supportable claims, active voice, and a clear next step.
 - **Code pass:** run available project verification first, then inspect for swallowed failures, hallucinated dependencies, stubs, unsafe shortcuts, hardcoded config, over-abstraction, narrative comments, duplicates, architecture drift, and missing tests.
 - **Automation pass:** verify trigger, actions, branches, failure modes, success criteria, input validation, secure config, rate awareness, idempotency, logging, fallback behavior, ownership, and approval status.
-- **Agent-output pass:** compare to the request, verify handles when possible, treat self-reports as reported until checked, distinguish local paths from reviewable links, and require specialist review where appropriate.
+- **Agent-output pass:** compare to the request, verify handles when possible, treat self-reports as reported until checked, distinguish machine-local paths from reviewable links or artifacts, and require specialist review where appropriate.
 
 ### 5. Assign severity
 
@@ -169,7 +169,13 @@ If a section has no items, write `none`.
 
 ## Eval Fixtures
 
-This package includes smoke-test fixtures in `evals/fixtures/`:
+This package includes smoke-test fixtures in `evals/fixtures/` and a deterministic validator at `scripts/validate_skill_package.py`. Run the validator before publishing or installing the skill into another profile:
+
+```bash
+python scripts/validate_skill_package.py
+```
+
+Fixtures included:
 
 - `prose-vague-claim.md`
 - `code-swallowed-error.md`
@@ -208,4 +214,4 @@ Before accepting an artifact:
 7. Copying external skill text without BrightBlitz governance, voice, and approval rules.
 8. Penalizing harmless style preferences more than real defects.
 9. Reporting an agent's claims as verified facts.
-10. Forgetting the handoff: Jose needs reviewable links or exact next actions, not only local paths.
+10. Forgetting the handoff: reviewers need reviewable links, attached artifacts, or exact next actions, not only machine-local paths.

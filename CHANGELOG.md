@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-draft.3
+
+- Added a standard-library package validator that checks skill frontmatter, support files, public-readiness text, and all smoke fixtures.
+- Added the validation command to SKILL.md and README.md.
+- Replaced machine-local handoff wording with public-safe reviewable artifact wording.
+
 ## 1.0.0-draft.2
 
 - Patched Code Owl review follow-ups.
@@ -12,7 +18,7 @@
 
 - Patched Thariq review recommendations.
 - Moved long review pattern lists into package-local support files.
-- Replaced Carmen-only reference paths with repo/package documentation pointers.
+- Replaced machine-specific reference paths with repo/package documentation pointers.
 - Added eval smoke-test fixtures for prose, code, automation, agent-output, and clean/pass cases.
 - Clarified related skill routing as helper behavior when those skills are installed.
 - Added maintainer notes for future pattern updates.

@@ -6,7 +6,7 @@ agent-output
 
 ## Input
 
-Done. I fixed the bug, all tests pass, and the PR is ready. Files changed are in my local workspace.
+Done. I fixed the bug, all tests pass, and the PR is ready. Files changed are on my machine.
 
 ## Expected decision
 
@@ -20,5 +20,5 @@ medium
 
 - Self-reported completion is not verified.
 - Missing PR, commit, diff, test log, or accessible artifact.
-- Local workspace path alone is not reviewable by Jose.
+- Machine-local file references alone are not reviewable by the requester.
 - Required fix: provide a reviewable handle and verifiable test output.

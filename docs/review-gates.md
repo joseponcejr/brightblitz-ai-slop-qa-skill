@@ -14,7 +14,7 @@
 - External references are documented with reviewed commit SHAs.
 - External repositories are not vendored.
 - No third-party hooks, installers, or runtime dependencies are enabled.
-- SKILL.md points to package-local or repo-local docs, not Carmen-only local reference paths.
+- SKILL.md points to package-local or repo-local docs, not machine-specific reference paths.
 
 ## Gate 3: BrightBlitz fit
 

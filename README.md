@@ -62,7 +62,13 @@ Then restart or reload the target Hermes session so the skill loader sees the ne
 
 ## Validation
 
-Validated locally before first upload and after the review patch:
+Run the package validator before publishing or installing the skill into another profile:
+
+```bash
+python scripts/validate_skill_package.py
+```
+
+Validated checks:
 
 - YAML frontmatter starts at byte 0 and parses.
 - Required `name` and `description` fields are present.
@@ -70,7 +76,8 @@ Validated locally before first upload and after the review patch:
 - Body is non-empty.
 - No em dashes or en dashes are present in skill, docs, examples, or eval fixtures.
 - Eval fixtures exist for prose, code, automation, agent-output, and clean/pass cases.
-- The skill loads in Carmen's active Hermes profile after local profile copy.
+- The deterministic package validator passes with all smoke fixtures.
+- A target Hermes profile can load the copied skill after restart or reload.
 
 ## Approval boundary
 
