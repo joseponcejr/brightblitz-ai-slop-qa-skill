@@ -80,6 +80,9 @@ Validated checks:
 - No em dashes or en dashes are present in skill, docs, examples, or eval fixtures.
 - Eval fixtures exist for prose, code, automation, agent-output, and clean/pass cases.
 - The deterministic package validator passes with all smoke fixtures.
+
+Manual rollout checks:
+
 - A target Hermes profile can load the copied skill after restart or reload.
 
 ## Approval boundary

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0-draft.4
+
+- Patched Thariq follow-ups after the post-Code Owl review.
+- Added negative routing guidance to the frontmatter description for adjacent Agent Output QA and Requesting Code Review skills.
+- Clarified repo-root eval fixtures as maintainer assets in the skill spec.
+- Moved target-profile load verification from automated validation checks to manual rollout checks in the README.
+
 ## 1.0.0-draft.3
 
 - Added a standard-library package validator that checks skill frontmatter, support files, public-readiness text, and all smoke fixtures.

@@ -1,7 +1,7 @@
 ---
 name: brightblitz-ai-slop-qa
-description: Use when reviewing AI-generated prose, code, automation specs, or agent outputs for polished but weak "AI slop" before BrightBlitz accepts, ships, publishes, or hands off the work. Combines prose-pattern cleanup with code and automation defect checks, evidence gates, and BrightBlitz communication standards.
-version: 1.0.0-draft.3
+description: Use when reviewing AI-generated prose, code, automation specs, or agent outputs for polished but weak "AI slop" before BrightBlitz accepts, ships, publishes, or hands off the work. Combines prose-pattern cleanup with code and automation defect checks, evidence gates, and BrightBlitz communication standards. Use brightblitz-agent-output-qa for full contractor or agent completion review and requesting-code-review for production code review.
+version: 1.0.0-draft.4
 author: BrightBlitz / Carmen Vega
 license: Private BrightBlitz Internal
 metadata:
