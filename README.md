@@ -55,7 +55,7 @@ Copy the skill directory into the target profile:
 ```bash
 mkdir -p ~/.hermes/profiles/<profile>/skills/productivity
 cp -R skills/productivity/brightblitz-ai-slop-qa ~/.hermes/profiles/<profile>/skills/productivity/
-hermes skills list -p <profile> --source local | grep brightblitz-ai-slop
+hermes -p <profile> skills list --source local | grep brightblitz-ai-slop
 ```
 
 Then restart or reload the target Hermes session so the skill loader sees the new skill.

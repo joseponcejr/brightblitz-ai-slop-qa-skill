@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0-draft.2
+
+- Patched Code Owl review follow-ups.
+- Bumped skill frontmatter version to match the post-review package state.
+- Clarified input guard handling as conditional when the workspace guard is available.
+- Corrected the example report so unverified self-reported tests are listed as fixes needed, not blockers.
+- Corrected the profile-specific install verification command to use the global `-p <profile>` flag before the `skills` subcommand.
+
 ## 1.0.0-draft.1
 
 - Patched Thariq review recommendations.

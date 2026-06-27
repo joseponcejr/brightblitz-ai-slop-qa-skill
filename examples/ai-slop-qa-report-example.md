@@ -13,10 +13,11 @@
 
 ## Blockers
 
-- The test result is self-reported. Verify the command output or PR checks before treating the work as complete.
+none
 
 ## Fixes needed
 
+- The test result is self-reported. Verify the command output or PR checks before treating the work as complete.
 - Replace vague claims such as "fully robust" with specific behavior verified by tests.
 - Confirm no TODO stubs, hardcoded config, or swallowed errors were introduced.
 
