@@ -4,7 +4,7 @@
 
 - `SKILL.md` exists at `skills/productivity/brightblitz-ai-slop-qa/SKILL.md`.
 - Frontmatter starts at byte 0.
-- `name` and `description` fields exist.
+- `name` and `description` fields exist and pass a lightweight frontmatter key check.
 - Description length is below 1024 characters.
 - Body is non-empty.
 - Main support files exist under the skill package: `references/review-patterns.md` and `references/maintainer-notes.md`.
@@ -13,7 +13,7 @@
 
 - External references are documented with reviewed commit SHAs.
 - External repositories are not vendored.
-- No third-party hooks, installers, or runtime dependencies are enabled.
+- No third-party hooks, installer scripts, package manifests, lockfiles, or runtime dependencies are enabled.
 - SKILL.md points to package-local or repo-local docs, not machine-specific reference paths.
 
 ## Gate 3: BrightBlitz fit
@@ -38,4 +38,4 @@
 - `evals/fixtures/automation-missing-failure-mode.md` expects an automation fix-first decision.
 - `evals/fixtures/agent-unverified-self-report.md` expects an agent-output fix-first decision.
 - `evals/fixtures/clean-pass-case.md` expects a pass decision.
-- Each fixture states expected confidence and required findings.
+- Each fixture states expected confidence and required findings; the smoke validator checks expected decision, confidence, and required/predicted finding terms.

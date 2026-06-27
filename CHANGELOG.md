@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-draft.5
+
+- Patched the post-review findings from the latest code review and Thariq-style skill review.
+- Expanded the deterministic smoke validator for required files, source-handling deny checks, public text/secret scans, and stronger fixture finding checks.
+- Clarified runtime versus source-repository validation assets and added client-facing preflight routing to the frontmatter trigger.
+
 ## 1.0.0-draft.4
 
 - Patched Thariq follow-ups after the post-Code Owl review.

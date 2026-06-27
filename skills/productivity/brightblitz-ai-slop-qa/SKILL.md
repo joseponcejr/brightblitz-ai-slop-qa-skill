@@ -1,7 +1,7 @@
 ---
 name: brightblitz-ai-slop-qa
-description: Use when reviewing AI-generated prose, code, automation specs, or agent outputs for polished but weak "AI slop" before BrightBlitz accepts, ships, publishes, or hands off the work. Combines prose-pattern cleanup with code and automation defect checks, evidence gates, and BrightBlitz communication standards. Use brightblitz-agent-output-qa for full contractor or agent completion review and requesting-code-review for production code review.
-version: 1.0.0-draft.4
+description: Use when reviewing AI-generated prose, code, automation specs, or agent outputs for polished but weak "AI slop" before BrightBlitz accepts, ships, publishes, or hands off the work. Combines prose-pattern cleanup with code and automation defect checks, evidence gates, and BrightBlitz communication standards. Use brightblitz-agent-output-qa for full contractor or agent completion review, requesting-code-review for production code review, and brightblitz-client-facing-deliverable-preflight for final client-facing send/share readiness.
+version: 1.0.0-draft.5
 author: BrightBlitz / Carmen Vega
 license: Private BrightBlitz Internal
 metadata:
@@ -18,7 +18,7 @@ Use this skill as a pre-acceptance QA gate for AI-generated work that looks poli
 
 AI slop is not only awkward writing. It also includes unsupported claims, hidden stubs, swallowed errors, hallucinated dependencies, hardcoded config, vague strategy, weak failure handling, and completion reports with no proof.
 
-This skill adapts patterns from two external reference repositories, `hardikpandya/stop-slop` and `scanaislop/aislop`, but it does not install, run, or vendor those tools. Source details and reviewed commits live in the repository maintainer document `docs/source-reference-review.md`.
+This skill adapts patterns from two external reference repositories, `hardikpandya/stop-slop` and `scanaislop/aislop`, but it does not install, run, or vendor those tools. If you are reviewing the source repository, source details and reviewed commits live in the maintainer document `docs/source-reference-review.md`. Installed profile copies may not include repository-root maintainer docs.
 
 ## When to Use
 
@@ -175,7 +175,7 @@ If a section has no items, write `none`.
 
 ## Eval Fixtures
 
-The source repository includes maintainer smoke-test fixtures in `evals/fixtures/` and a deterministic validator at `scripts/validate_skill_package.py`. These are repo-root validation tools, not runtime files that are copied into a Hermes profile with the skill directory. Run the validator from the repository root before publishing or installing the skill into another profile:
+If you are reviewing the source repository, it includes maintainer smoke-test fixtures in `evals/fixtures/` and a deterministic smoke validator at `scripts/validate_skill_package.py`. These are repo-root validation tools, not runtime files that are copied into a Hermes profile with the skill directory. Run the validator from the repository root before publishing or installing the skill into another profile:
 
 ```bash
 python scripts/validate_skill_package.py

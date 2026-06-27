@@ -65,7 +65,7 @@ This copies the runtime skill package only. Repository-root files such as `docs/
 
 ## Validation
 
-Run the package validator before publishing or installing the skill into another profile:
+Run the package smoke validator before publishing or installing the skill into another profile:
 
 ```bash
 python scripts/validate_skill_package.py
@@ -73,13 +73,15 @@ python scripts/validate_skill_package.py
 
 Validated checks:
 
-- YAML frontmatter starts at byte 0 and parses.
+- Frontmatter starts at byte 0 and passes a lightweight required-key check.
 - Required `name` and `description` fields are present.
 - Description is below the Hermes limit.
 - Body is non-empty.
-- No em dashes or en dashes are present in skill, docs, examples, or eval fixtures.
+- Public text files have no em dashes, en dashes, forbidden machine-local references, or secret-like values.
+- Required source files, README, CHANGELOG, skill support files, docs, examples, and eval fixtures exist.
+- Deny checks find no vendored source, package dependency manifests, hook directories, or installer scripts.
 - Eval fixtures exist for prose, code, automation, agent-output, and clean/pass cases.
-- The deterministic package validator passes with all smoke fixtures.
+- The deterministic package smoke validator passes with all smoke fixtures.
 
 Manual rollout checks:
 
