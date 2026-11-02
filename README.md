@@ -1,8 +1,16 @@
-# BrightBlitz AI Slop QA Skill
+# Review AI Work for Unsupported Claims and Hidden Defects
 
-BrightBlitz Hermes skill package for reviewing AI-generated prose, code, automation specs, and agent outputs before BrightBlitz accepts, ships, publishes, or hands off the work.
+Polished AI output can still leave you with unsupported claims, unfinished code, or a completion report that proves very little. You need to know what deserves correction before the work moves forward.
 
-The skill catches polished but weak output: vague writing, unsupported claims, swallowed errors, hallucinated imports, hidden stubs, hardcoded config, over-abstraction, weak automation failure handling, and unverified agent completion reports.
+This BrightBlitz Hermes skill helps reviewers examine prose, code, automation specifications, and agent outputs for those weaknesses. It supplies review patterns and evidence gates for identifying issues and requesting corrections, rather than treating confident wording as proof of quality.
+
+Start with three steps:
+
+1. Open [the skill](skills/productivity/brightblitz-ai-slop-qa/SKILL.md) and identify the deliverable and review scope.
+2. Apply the relevant prose, code, automation, or completion-evidence checks to the actual work.
+3. Record supported findings and route the corrected deliverable through its required specialist or release review.
+
+The skill is marked as a draft. It does not install the external reference tools, replace production code review, or authorize client sends, deployments, infrastructure changes, or scheduled automation changes.
 
 ## Skill
 

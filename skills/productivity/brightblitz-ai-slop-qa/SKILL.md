@@ -10,7 +10,7 @@ metadata:
     related_skills: [brightblitz-agent-output-qa, requesting-code-review, brightblitz-client-facing-deliverable-preflight]
 ---
 
-# BrightBlitz AI Slop QA
+# Review AI Work for Unsupported Claims and Hidden Defects
 
 ## Overview
 
